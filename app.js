@@ -31,11 +31,10 @@ app.get('/dynamic', function(req, res){
   res.send(output);
 })
 
-
-
 app.get('/route', function(req, res){
   res.send('Hello Router, <img src="/nodejs_logo.jpg">')
 })
+
 app.get('/login', function(req, res){
   res.send('Login please');
 });
