@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
-
+app.set('view engine', 'jade');
+app.set('views', './views');
 app.use(express.static('public'));//public이라는 디렉토리를 정적으로
-
+app.get('/template', function(req, res){
+  res.render('temp');//렌더링
+})
 app.get('/', function(req, res){
   res.send('<h1>Hello home page<h1>');
 });
